@@ -1,4 +1,4 @@
-
+const webpack = require('webpack')
 export default {
   mode: 'spa',
   /*
@@ -44,6 +44,11 @@ export default {
   ** Build configuration
   */
   build: {
+    plugins:[
+      new webpack.ProvidePlugin({
+        '_': 'lodash'
+      })
+    ],
     /*
     ** You can extend webpack config here
     */

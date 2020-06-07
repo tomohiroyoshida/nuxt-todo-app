@@ -1,4 +1,4 @@
- import firebase from '~/plugins/firebase'
+import firebase from '~/plugins/firebase'
 import { firestoreAction } from 'vuexfire'
 
 
@@ -29,4 +29,10 @@ export const actions = {
             done: !todo.done
         })
     })
+}
+
+export const getters = {
+    orderedTodos: state => {
+        return _.sortBy(state.todos, 'created')
+    }
 }
