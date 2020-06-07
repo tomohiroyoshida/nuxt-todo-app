@@ -1,5 +1,9 @@
 const webpack = require('webpack')
+
 export default {
+  generate: {
+    fallback: true
+  },
   mode: 'spa',
   /*
   ** Headers of the page
