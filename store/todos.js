@@ -32,6 +32,7 @@ export const actions = {
 }
 
 export const getters = {
+    //  タスクを時系列順にソート
     orderedTodos: state => {
         return _.sortBy(state.todos, 'created')
     }

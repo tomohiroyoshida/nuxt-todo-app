@@ -6,21 +6,18 @@
                 <button>Add</button>
             </form>
         </div>
-        <!-- データそのまま取り出す　{{ todos }} -->
-        <ul>
+        <!-- {{ todos }} -->
+        <ol>
             <li v-for="todo in todos" :key="todo.id">
                 <span v-if="todo.created">
-                    <!-- {{ todo }} -->
-                    <input type="checkbox"
-                    v-bind:checked="todo.done"
-                    @change="toggle(todo)">
+                    <input type="checkbox"  v-bind:checked="todo.done"  @change="toggle(todo)">
                     <span v-bind:class="{ done: todo.done }">
-                        {{ todo.name }}, {{ todo.created.toDate() | dateFilter }}
+                        [Title] {{ todo.name }} [Date] {{ todo.created.toDate() | dateFilter }}
                     </span>
                     <button v-on:click="remove(todo.id)">Remove</button>
                 </span>
             </li>
-        </ul>
+        </ol>
     </div>
 </template>
 
@@ -51,6 +48,7 @@ export default {
     computed: {
         todos: function() {
             // return this.$store.state.todos.todos
+            // 時系列順にソート
             return this.$store.getters['todos/orderedTodos']
         }
     },
@@ -65,11 +63,15 @@ export default {
 <style>
 li > span > span.done {
     text-decoration: line-through;
+    color: darkblue;
+}
+li {
+    color: crimson;
 }
 .form {
     margin: 15px;
 }
 li {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 </style>
