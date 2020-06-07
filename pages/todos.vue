@@ -65,7 +65,7 @@ li > span > span.done {
     text-decoration: line-through;
     color: darkblue;
 }
-li {
+li > span {
     color: crimson;
 }
 .form {
