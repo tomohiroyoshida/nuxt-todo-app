@@ -23,6 +23,9 @@
 
 <script>
 import moment from 'moment'
+import firebase from 'firebase'
+import db from '../plugins/firebase_config'
+
 export default {
     data: function() {
         return {
