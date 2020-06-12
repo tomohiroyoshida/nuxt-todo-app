@@ -1,22 +1,20 @@
-# nuxt-todo
+# TODOアプリ
+====
+Nuxt.jsとFirebaseを使ったTODOアプリです<br>
+タスクの追加、編集、削除、時系列順のタスクのソート、タスクをFirestoreに補完する機能を実装しました
+## Overview
+-使用技術
+  - Nuxt.js
+  - Firebase
 
-> My primo Nuxt.js project
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- 工夫した点
+  - 今日の天気が一番大きく出るようにしました
+  - ５日間の天気と気温が３時間ごとに詳しく出るようにしました
+  - アイコンで天気がひと目でわかるようにしました
+  - APIをつかって現在地から天気を出すようにしました
+  - コメントをなるべく書くように心がけました
+- 苦労した点
+  - CSSで無駄なコードが多かったのでそれをリファクタリングする作業が大変でした
+  - 変数が多く出てきたためそれを整理するのが大変でした
+## Author 
+吉田智洋(Tomohiro Yoshida)
