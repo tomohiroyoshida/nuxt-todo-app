@@ -3,7 +3,7 @@
 Nuxt.jsとFirebaseを使ったTODOアプリです<br>
 タスクの追加、編集、削除、時系列順のタスクのソート、タスクをFirestoreに補完する機能を実装しました
 ## Overview
--使用技術
+- 使用技術
   - Nuxt.js
   - Firebase
 
